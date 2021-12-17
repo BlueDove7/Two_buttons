@@ -12,31 +12,26 @@ class MainActivity : AppCompatActivity() {
     private var diaperCounterMarcin = 0
     private var diaperCounterKarolcia = 0
 
-    private val viewBiding by lazy(LazyThreadSafetyMode.NONE) {
-        ActivityMainBinding.inflate(layoutInflater)
-    }
+    private lateinit var viewBinding : ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)  ///aplikacja idzie od zera //nie aplikacja tylko Activity, aplikacja może się składać z wielu activity
-        setContentView(R.layout.activity_main)
+        viewBinding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(viewBinding.root)
 
-        viewBiding.button1.setOnClickListener {
+        viewBinding.marcinsBtn.setOnClickListener {
             diaperCounterMarcin++
-            viewBiding.textView2.text = "Marcin's Diapers: $diaperCounterMarcin"
+            viewBinding.marcinsCounter.text = "Marcin's Diapers: $diaperCounterMarcin"
             updateSumCounter()
         }
-        viewBiding.button2.setOnClickListener {
+        viewBinding.karolciasBtn.setOnClickListener {
             diaperCounterKarolcia++
-            viewBiding.textView3.text = "Karolcia's Diapers: $diaperCounterKarolcia"
+            viewBinding.karolciasCounter.text = "Karolcia's Diapers: $diaperCounterKarolcia"
             updateSumCounter()
         }
-    }
-
-    override fun onCreateView(name: String, context: Context, attrs: AttributeSet): View? {
-        return viewBiding.root
     }
 
     private fun updateSumCounter() {
-        viewBiding.textView.text = (diaperCounterMarcin + diaperCounterKarolcia).toString()
+        viewBinding.diaperCounter.text = (diaperCounterMarcin + diaperCounterKarolcia).toString()
     }
 }

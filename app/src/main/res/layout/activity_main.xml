@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/diaperCounter"
         android:layout_width="205dp"
         android:layout_height="170dp"
         android:background="#932323"
@@ -22,50 +22,50 @@
         app:layout_constraintVertical_bias="0.465" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/karolciasBtn"
         android:layout_width="123dp"
         android:layout_height="60dp"
         android:layout_marginStart="40dp"
         android:layout_marginBottom="20dp"
         android:text="+1 Pielucha"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/diaperCounter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/marcinsBtn"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.718" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/marcinsBtn"
         android:layout_width="112dp"
         android:layout_height="57dp"
         android:text="+1 Pielucha"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button1"
+        app:layout_constraintEnd_toStartOf="@+id/karolciasBtn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.19" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/marcinsCounter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:text="Marcina"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/karolciasCounter"
         app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/marcinsBtn"
         app:layout_constraintVertical_bias="0.060000002" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/karolciasCounter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Karolci"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/marcinsBtn"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.31" />
 
